@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 20, 2017 9:00:38 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Reg" table="Reg" schema="dbo" catalog="MVCdb" optimistic-lock="version">
+        <id name="username" type="string">
+            <column name="username" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="password" type="string">
+            <column name="password" length="20" not-null="true" />
+        </property>
+        <property name="lastname" type="string">
+            <column name="lastname" length="20" />
+        </property>
+        <property name="isadmin" type="java.lang.Boolean">
+            <column name="isadmin" />
+        </property>
+    </class>
+</hibernate-mapping>
